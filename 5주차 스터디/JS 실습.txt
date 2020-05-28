@@ -1,0 +1,41 @@
+﻿https://www.skku.edu/skku/campus/skk_comm/news.do
+에 접속 후 상단의 '검색'버튼의 텍스트와 배경색을
+바꿔보겠습니다.
+
+
+let a = document.querySelector('.sea_btn')
+
+a.textContent = "멋사"
+
+a.style.backgroundColor = "pink";
+
+querySelector, getElementById는 1개의 Element를 선택하는 것입니다.
+
+querySelectorAll, getElementsByClassName, getElementsByTagName은 
+다수의 Element를 선택합니다.
+
+이번에는 h3태그로 쓰여진 '성대뉴스' 부분을 선택해보겠습니다.
+
+let b = document.getElementsByTagName('h3');
+undefined
+
+b
+HTMLCollection [h3.cont_tit]
+0: h3.cont_tit
+length: 1
+__proto__: HTMLCollection
+
+//HTMLCollection옆의 화살표를 눌러보면 
+선택된 h3태그들에 대해서 볼 수 있습니다.
+현재 페이지에서는 '성대뉴스'라고 쓰인 것
+하나만 h3태그로 쓰여진 것을 볼 수 있습니다.
+다수의 Element를 선택하는 getElementsByTagName으로 해당 태그를 선택했기 때문에
+이 때는 배열에 접근하는 방식으로 해당 태그에
+접근해야 합니다.
+위에서 a와 아래에서 b[0]의 차이점이 바로 이것입니다.
+
+b[0].textContent = "멋사 뉴스"
+"멋사 뉴스"
+
+b[0].style.color = "red"
+"red"

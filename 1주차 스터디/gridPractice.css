@@ -3,6 +3,11 @@ body{
     font-size:40px;
 }
 
+.grid-container > #helium > p {
+    color : lightslategray;
+}
+
+
 .grid-container{
     display:grid;
     grid-template-rows:repeat(4,150px);
@@ -60,3 +65,4 @@ td{
     background-color:white;
     text-align:center;
 }
+
